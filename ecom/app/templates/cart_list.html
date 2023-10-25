@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Cart</title>
+</head>
+
+<h1>Cart</h1>
+
+{% if user.is_authenticated %}
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: flex-start;">
+        {% for product in cartproducts %}
+            <div class="card" style="width: 18rem; margin-right: 20px; margin-bottom: 20px;">
+                <img style="height: 350; width: 20rem;" class="card-img-top" src="{{ product.itemsimg.url }}" alt="card imgage cap">
+                <div class="card_body">
+                    <h3 class="card_title">{{ product.name }}</h3>
+                    <p class="card-text">Price: {{ product.price }}</p>
+                </div>
+            </div>
+        {% endfor%}
+    </div>
+
+{% else %}
+<p>Your cart is empty</p>
+{% endif %}
+<a href="{% url 'products' %}">Continue Shopping</a>
+
+</body>
+</html>

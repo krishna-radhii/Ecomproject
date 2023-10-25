@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: hwb(0 92% 4% / 0.493);
+            /* text-align: center; */
+            color: #f8f2f2;
+          }
+        h1 {
+    color: #580303;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #030303;
+    box-shadow: 0 0 10px rgba(241, 225, 225, 0.2);
+    text-align: left;
+   
+}
+</style>
+</head>
+<body>
+    <h1>Registration</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: hwb(0 92% 4% / 0.493);
+            text-align: center;
+        }
+
+        h1 {
+            color: #080707;
+        }
+
+        p {
+            color: #973a3a;
+        }
+
+
+    </style>
+</head>
+<body>
+    <centre><h1>Welcome To BOOKSTORE</h1></centre>
+    <!-- {% if user.is_authenticated %}
+        <p>Hello, {{ user.username }}!</p>
+        <centre><a href="{% url 'products' %}"></a></centre>
+        <br> -->
+        <!-- <a href="{% url 'logout' %}">Logout</a>
+    {% else %} -->
+        <p>You are not logged in.</p>
+        <a href="{% url 'login' %}">Login</a> | <a href="{% url 'register' %}">Register</a>
+    <!-- {% endif %} -->
+</body>
+</html>
